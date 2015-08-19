@@ -1,0 +1,22 @@
+.editor-wrapper{
+	
+}
+.col-left{
+	background: red;
+	height: 100%;
+	width: 20%;
+	float: left;
+	overflow: auto;
+}
+.col-center{
+	background: green;
+	height: 100%;
+	width: 60%;
+	float: left;
+}
+.col-right{
+	background: blue;	
+	height: 100%;
+	width: 20%;
+	float: left;
+}
