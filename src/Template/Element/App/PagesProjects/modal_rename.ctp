@@ -1,4 +1,4 @@
-<div class="modal fade" id="my-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="modal-rename" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -31,7 +31,7 @@
                             <?= __('Fechar') ?>
                         </button>
                         <button type="submit" class="btn btn-primary btn-add btn-submit">
-                            <?= __('Criar') ?>
+                            <?= __('Renomear') ?>
                         </button>
                     </div>  
                 </div>

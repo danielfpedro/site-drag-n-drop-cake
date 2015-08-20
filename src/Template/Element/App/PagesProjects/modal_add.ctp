@@ -1,4 +1,4 @@
-<div class="modal fade" id="my-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="modal-add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -9,18 +9,19 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <h4 class="modal-title" id="myModalLabel">
-                    <?= __('Renomear Página') ?>
+                    <?= __('Nova Página') ?>
                 </h4>
             </div>
             <div class="modal-body">
                 <?php 
-                    echo $this->Form->create($currentPage, [
-                        'id' => 'form-ajax',
+                    echo $this->Form->create($newPage, [
+                        'id' => 'form-ajax-add-page',
                         'url' => [
                             'controller' => 'PagesProjects',
-                            'action' =>'edit'
+                            'action' =>'add'
                         ]
                     ]);
+                    echo $this->Form->input('project_id', ['type' => 'hidden', 'value' => $project->id]);
                     echo $this->Form->input('name');
                 ?>
             </div>

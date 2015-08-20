@@ -1,14 +1,14 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\ProjectsTable;
+use App\Model\Table\PagesProjectsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\ProjectsTable Test Case
+ * App\Model\Table\PagesProjectsTable Test Case
  */
-class ProjectsTableTest extends TestCase
+class PagesProjectsTableTest extends TestCase
 {
 
     /**
@@ -17,6 +17,7 @@ class ProjectsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
+        'app.pages_projects',
         'app.projects',
         'app.users'
     ];
@@ -29,8 +30,8 @@ class ProjectsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Projects') ? [] : ['className' => 'App\Model\Table\ProjectsTable'];
-        $this->Projects = TableRegistry::get('Projects', $config);
+        $config = TableRegistry::exists('PagesProjects') ? [] : ['className' => 'App\Model\Table\PagesProjectsTable'];
+        $this->PagesProjects = TableRegistry::get('PagesProjects', $config);
     }
 
     /**
@@ -40,7 +41,7 @@ class ProjectsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Projects);
+        unset($this->PagesProjects);
 
         parent::tearDown();
     }

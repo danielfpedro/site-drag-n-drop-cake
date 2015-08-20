@@ -1,0 +1,10 @@
+.dropdown-devices > a{
+	font-size: 22px;
+}
+.dropdown-devices > ul.dropdown-menu li a{
+	/*font-size: 18px;*/
+}
+.dropdown-devices > ul.dropdown-menu{
+	
+	/*text-align: center;*/
+}

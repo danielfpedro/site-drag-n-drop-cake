@@ -12,25 +12,29 @@ class EditorController extends AppController
 	{
 		$this->loadModel('Projects');
 
+		$newPage = $this->Projects->PagesProjects->newEntity();
+
 		$project = $this->Projects->find('all', [
 			'conditions' => [
 				'id' => $projectId
 			],
-			'contain' => ['Pages']
+			'contain' => ['PagesProjects']
 		])->first();
 
+
+
 		if ((int)$currentPageId) {
-			foreach ($project->pages as $page) {
+			foreach ($project->pages_projects as $page) {
 				if ($page->id == $currentPageId) {
 					$currentPage = $page;
 					break;
 				}
 			}
 		} else {
-			$currentPage = $project->pages[0];	
+			$currentPage = $project->pages_projects[0];	
 		}
 		
 
-		$this->set(compact('project', 'projectId', 'currentPage'));
+		$this->set(compact('project', 'projectId', 'currentPage', 'newPage'));
 	}
 }

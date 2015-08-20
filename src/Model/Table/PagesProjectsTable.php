@@ -1,18 +1,18 @@
 <?php
 namespace App\Model\Table;
 
-use App\Model\Entity\Page;
+use App\Model\Entity\PagesProject;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Pages Model
+ * PagesProjects Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Projects
  */
-class PagesTable extends Table
+class PagesProjectsTable extends Table
 {
 
     /**
@@ -25,7 +25,7 @@ class PagesTable extends Table
     {
         parent::initialize($config);
 
-        $this->table('pages');
+        $this->table('pages_projects');
         $this->displayField('name');
         $this->primaryKey('id');
 

@@ -9,10 +9,12 @@
     <?= $this->Html->meta('icon') ?>
 
 	<?= $this->Html->css('../lib/bootstrap/dist/css/bootstrap.min') ?>
-    <?= $this->Html->css('app.css') ?>
+    <?= $this->Html->css('app') ?>
+    <?= $this->Html->css('../lib/fontawesome/css/font-awesome.min') ?>
 
 	<?= $this->Html->script('../lib/jquery/dist/jquery.min') ?>
 	<?= $this->Html->script('../lib/bootstrap/dist/js/bootstrap.min') ?>
+	<?= $this->Html->script('App/common') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>

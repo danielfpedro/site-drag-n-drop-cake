@@ -1,5 +1,8 @@
 <?= $this->assign('title', 'Editor')  ?>
 <?= $this->Html->css('editor', ['inline' => false])  ?>
+<?= $this->Html->script('App/Editor/index', ['inline' => false])  ?>
+
+<input type="hidden" id="url" value="<?= $this->Url->build([$project->id]) ?>">
 
 <div class="editor-wrapper">
 	<div class="col-left">
@@ -15,20 +18,5 @@
 	</div>
 </div>
 
-<script type="text/javascript">
-	$(function(){
-		fitWrapper();
-		$(window).resize(function(){
-			fitWrapper();
-		});
-		function fitWrapper(){
-			var navbarH = 50;
-			var w = $(window).width() + 'px';
-			var h = ($(window).height() - navbarH) + 'px';
-
-			console.log(w);
-
-			$('.editor-wrapper').css({width: w, height: h, 'margin-top': navbarH});
-		}
-	});
-</script>
+<?= $this->element('App/PagesProjects/modal_add') ?>
+<?= $this->element('App/PagesProjects/modal_rename') ?>

@@ -11,7 +11,6 @@ use Cake\Validation\Validator;
  * Projects Model
  *
  * @property \Cake\ORM\Association\BelongsTo $Users
- * @property \Cake\ORM\Association\HasMany $Pages
  */
 class ProjectsTable extends Table
 {
@@ -32,13 +31,11 @@ class ProjectsTable extends Table
 
         $this->addBehavior('Timestamp');
 
+        $this->hasMany('PagesProjects');
+        
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
-        ]);
-        $this->hasMany('Pages', [
-            'dependent' => true,
-            'foreignKey' => 'project_id'
         ]);
     }
 

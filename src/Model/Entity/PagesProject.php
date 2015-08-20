@@ -4,9 +4,9 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Page Entity.
+ * PagesProject Entity.
  */
-class Page extends Entity
+class PagesProject extends Entity
 {
 
     /**
